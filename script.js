@@ -34,4 +34,3 @@ check.addEventListener('click', function (event) {
 
 const againBtn = document.querySelector('.again');
 
-// againBtn.addEventListener('click', function () {});
