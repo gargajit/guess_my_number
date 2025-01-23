@@ -10,7 +10,6 @@ console.log(randNum);
 
 check.addEventListener('click', function (event) {
   const inputNum = document.querySelector('.guess').value;
-  console.log(inputNum);
 
   if (inputNum == randNum) {
     document.body.style.backgroundColor = '#60b347';
@@ -32,3 +31,7 @@ check.addEventListener('click', function (event) {
     document.querySelector('.score').innerHTML = score;
   }
 });
+
+const againBtn = document.querySelector('.again');
+
+// againBtn.addEventListener('click', function () {});
