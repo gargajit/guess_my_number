@@ -63,6 +63,7 @@ againBtn.addEventListener('click', function () {
 
   // Reset the game state
   document.body.style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = defaultNumber;
   document.querySelector('.message').textContent = defaultMessage;
   document.querySelector('.score').textContent = score;
