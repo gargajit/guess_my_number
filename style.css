@@ -122,6 +122,17 @@ h1 {
   animation: wrong-flash 0.1s ease;
 }
 
+@keyframes wrong-flash {
+  0% {
+    background-color: #f22e3e;
+    opacity: 0.5;
+  }
+  100% {
+    background-color: #222;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 620px) {
   html {
     font-size: 46.5%;
