@@ -162,7 +162,10 @@ h1 {
 
   .between {
     font-size: 1.4rem;
-    top: 3rem;
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    transform: translate(45%, 50%);
   }
 
   .guess {
@@ -179,10 +182,11 @@ h1 {
   }
 
   .btn {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: inherit;
     padding: 2rem 3rem;
     cursor: pointer;
   }
 }
+
 
