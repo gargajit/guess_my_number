@@ -5,7 +5,6 @@ let defaultNumber = document.querySelector('.number').textContent;
 let defaultScore = 20;
 let defaultGuess = document.querySelector('.guess').value;
 
-// console.log(typeof defaultGuess);
 
 const check = document.querySelector('.check');
 let score = defaultScore;
@@ -13,7 +12,6 @@ let score = defaultScore;
 let highscore = 0;
 
 let randNum = Math.floor(Math.random() * 20) + 1;
-console.log(randNum);
 
 check.addEventListener('click', function () {
   const inputNum = document.querySelector('.guess').value;
@@ -27,7 +25,7 @@ check.addEventListener('click', function () {
     document.body.style.backgroundColor = '#60b347';
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.number').textContent = randNum;
-    // document.querySelector('.highscore').textContent = score;
+    
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -48,7 +46,6 @@ const againBtn = document.querySelector('.again');
 againBtn.addEventListener('click', function () {
   score = defaultScore;
   randNum = Math.floor(Math.random() * 20) + 1;
-  console.log(randNum);
 
   document.body.style.backgroundColor = '#222';
   document.querySelector('.number').textContent = defaultNumber;
