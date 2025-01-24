@@ -5,7 +5,6 @@ let defaultNumber = document.querySelector('.number').textContent;
 let defaultScore = 20;
 let defaultGuess = document.querySelector('.guess').value;
 
-
 const check = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
 let score = defaultScore;
@@ -21,21 +20,22 @@ function animateWrong() {
   }, 100);
 }
 
+
 // Event listener for the "Check" button
 check.addEventListener('click', function () {
-  const inputNum = document.querySelector('.guess').value;
+  const inputNum = Number(document.querySelector('.guess').value);
 
   if (!inputNum) {
     document.querySelector('.message').textContent = '⛔ No Number!';
     return;
   }
 
-  if (inputNum == randNum) {
+  if (inputNum === randNum) {
     // Correct Guess
     document.body.style.backgroundColor = '#60b347';
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('.number').textContent = randNum;
-    // document.querySelector('.highscore').textContent = score;
+    document.querySelector('.number').style.width = '30rem';
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -54,6 +54,7 @@ check.addEventListener('click', function () {
     document.body.style.backgroundColor = '#f22e3e';
   }
 });
+
 
 // Event listener for the "Again" button
 againBtn.addEventListener('click', function () {
