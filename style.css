@@ -146,12 +146,12 @@ h1 {
   }
 
   .right {
-    width: 42rem;
-    font-size: 1.8rem;
+    width: 40rem;
+    font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
   }
 
   .number {
@@ -161,7 +161,7 @@ h1 {
   }
 
   .between {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     position: absolute;
     top: 70%;
     right: 50%;
@@ -187,6 +187,17 @@ h1 {
     padding: 2rem 3rem;
     cursor: pointer;
   }
+
+  .message {
+    margin-bottom: 6.5rem;
+    height: 2.5rem;
+  }
+
+  .label-score,
+  .label-highscore {
+    font-size: 1.3rem;
+  }
 }
+
 
 
