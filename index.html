@@ -20,8 +20,31 @@
       <p class="between">(Between 1 and 20)</p>
       <button class="btn again">Again!</button>
       <div class="number">?</div>
+      <button class="btn show-modal">About the Game!</button>
     </header>
     <main>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2 class="modal-heading">About the Game</h1>
+          <ul>
+            <li>The game starts with a score of 20.</li>
+            <li>Each wrong guess decreases your score by 1.</li>
+            <li>Your initial high score is 0.</li>
+            <li>
+              When you guess the number correctly, your score becomes 
+              your high score if it is higher than your previous high score.
+            </li>
+            <li>
+              If your guess is too low, you'll see a "Too Low" message. 
+              Similarly, if your guess is too high, you'll see a "Too High" message.
+            </li>
+            <li>
+              Clicking the <b>Again</b> button resets the game, including the 
+              score and the secret number, but your high score remains to beat.
+            </li>
+          </ul>          
+      </div>
+      <div class="overlay hidden"></div>
       <section class="left">
         <input type="number" class="guess" />
         <button class="btn check">Check!</button>
