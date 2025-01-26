@@ -18,7 +18,6 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const showModal = document.querySelector('.show-modal');
 
-
 function animateWrong() {
   document.body.classList.add('wrong');
 
@@ -27,41 +26,46 @@ function animateWrong() {
   }, 100);
 }
 
+function displayMessage(message) {
+  document.querySelector('.message').textContent = message;
+}
 
 // Event listener for the "Check" button
 check.addEventListener('click', function () {
   const inputNum = Number(document.querySelector('.guess').value);
 
   if (!inputNum) {
-    document.querySelector('.message').textContent = '⛔ No Number!';
+    displayMessage('⛔ No Number!');
     return;
   }
 
   if (inputNum === randNum) {
     // Correct Guess
     document.body.style.backgroundColor = '#60b347';
-    document.querySelector('.message').textContent = '🎉 Correct Number!';
+    displayMessage('🎉 Correct Number!');
     document.querySelector('.number').textContent = randNum;
     document.querySelector('.number').style.width = '30rem';
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
+    showModal.classList.add('hidden');
+    againBtn.classList.remove('hidden');
   } else {
     //  Wrong Guess
     animateWrong();
-    document.querySelector('.message').textContent =
-      inputNum < randNum ? '📉 Too Low' : '📈 Too High';
+    // document.querySelector('.message').textContent =
+    //   inputNum < randNum ? '📉 Too Low' : '📈 Too High';
+    displayMessage(inputNum < randNum ? '📉 Too Low' : '📈 Too High');
     score--;
     document.querySelector('.score').textContent = score;
   }
 
   if (score <= 0) {
-    document.querySelector('.message').textContent = '💥 You Lost the Game!';
+    displayMessage('💥 You Lost the Game!');
     document.body.style.backgroundColor = '#f22e3e';
   }
 });
-
 
 // Event listener for the "Again" button
 againBtn.addEventListener('click', function () {
@@ -72,11 +76,13 @@ againBtn.addEventListener('click', function () {
   document.body.style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.number').textContent = defaultNumber;
-  document.querySelector('.message').textContent = defaultMessage;
+  displayMessage(defaultMessage);
   document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = defaultGuess;
 
   document.body.classList.remove('wrong');
+  showModal.classList.remove('hidden');
+  againBtn.classList.add('hidden');
 });
 
 // Modal event handler
@@ -100,4 +106,3 @@ document.addEventListener('keydown', function (event) {
     if (!modal.classList.contains('hidden')) closeModal();
   }
 });
-
