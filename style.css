@@ -76,20 +76,6 @@ h1 {
   right: 2rem;
 }
 
-.again {
-  font-family: inherit;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 1.75rem 3rem;
-  border: none;
-  background-color: #eee;
-  color: #222;
-  cursor: pointer;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-}
-
 .guess {
   background: none;
   border: 4px solid #eee;
@@ -115,6 +101,21 @@ h1 {
 
 .btn:hover {
   background-color: #ccc;
+}
+
+.again {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.75rem 3rem;
+  border: none;
+  background-color: #eee;
+  color: #222;
+  cursor: pointer;
+  position: absolute;
+  bottom: 27rem;
+  left: 10rem;
+  transform: translate(50%, 55%);
 }
 
 .message {
@@ -148,14 +149,16 @@ h1 {
   font-weight: 600;
   padding: 1.75rem 3rem;
   border: none;
-  /* background-color: #eee;
-  color: #222; */
-  background-color: #222;
-  color: #eee;
+  background-color: #eee;
+  color: #222;
   cursor: pointer;
   position: absolute;
   top: 2rem;
   left: 2rem;
+}
+
+.show-modal:hover {
+  color: #222;
 }
 
 .close-modal {
@@ -194,8 +197,8 @@ li {
   transform: translate(-50%, -50%);
   width: 60%;
   color: #222;
-  background-color: white;
-  padding: 6rem;
+  background-color: #eee;
+  padding: 4rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -212,7 +215,7 @@ li {
   z-index: 5;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 680px) {
   html {
     font-size: 46.5%;
     box-sizing: border-box;
@@ -220,7 +223,7 @@ li {
 
   header {
     position: relative;
-    height: 30vh;
+    height: 40vh;
     border-bottom: 5px solid #eee;
   }
 
@@ -282,6 +285,17 @@ li {
     cursor: pointer;
   }
 
+  .again {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.5rem 2.5rem;
+    position: absolute;
+    bottom: 24rem;
+    left: 8rem;
+    transform: translate(45%, 50%);
+  }
+
   .message {
     margin-bottom: 6.5rem;
     height: 2.5rem;
@@ -292,8 +306,21 @@ li {
     font-size: 1.3rem;
   }
 
+  .show-modal {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.5rem 2.5rem;
+    border: none;
+    background-color: #eee;
+    color: #222;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
   .modal {
-    width: 85%;
+    width: 80%;
   }
 
   .modal-heading {
@@ -302,11 +329,11 @@ li {
   }
 
   ul {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   li {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     line-height: 1.5rem;
   }
 }
