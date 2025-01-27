@@ -43,6 +43,9 @@ main {
 .right {
   width: 52rem;
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ELEMENTS STYLE */
@@ -112,10 +115,6 @@ h1 {
   background-color: #eee;
   color: #222;
   cursor: pointer;
-  position: absolute;
-  bottom: 27rem;
-  left: 10rem;
-  transform: translate(50%, 55%);
 }
 
 .message {
@@ -286,14 +285,8 @@ li {
   }
 
   .again {
-    font-family: inherit;
     font-size: 1.2rem;
-    font-weight: 600;
     padding: 1.5rem 2.5rem;
-    position: absolute;
-    bottom: 24rem;
-    left: 8rem;
-    transform: translate(45%, 50%);
   }
 
   .message {
