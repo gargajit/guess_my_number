@@ -148,8 +148,10 @@ h1 {
   font-weight: 600;
   padding: 1.75rem 3rem;
   border: none;
-  background-color: #eee;
-  color: #222;
+  /* background-color: #eee;
+  color: #222; */
+  background-color: #222;
+  color: #eee;
   cursor: pointer;
   position: absolute;
   top: 2rem;
