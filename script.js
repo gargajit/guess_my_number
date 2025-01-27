@@ -49,7 +49,7 @@ check.addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-    showModal.classList.add('hidden');
+    check.classList.add('hidden');
     againBtn.classList.remove('hidden');
   } else {
     //  Wrong Guess
@@ -81,7 +81,7 @@ againBtn.addEventListener('click', function () {
   document.querySelector('.guess').value = defaultGuess;
 
   document.body.classList.remove('wrong');
-  showModal.classList.remove('hidden');
+  check.classList.remove('hidden');
   againBtn.classList.add('hidden');
 });
 
